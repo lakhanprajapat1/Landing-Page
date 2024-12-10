@@ -56,12 +56,17 @@ tl2.from(".services h1",{
     opacity:0,
     duration:1,
 })
+tl2.from(".services p",{
+    y:100,
+    opacity:0,
+    duration:1,
+})
 
 var tl3= gsap.timeline({
     scrollTrigger:{
         trigger:".line1",
         scroller:"body",
-        markers:true,
+        // markers:true,
         start:"top 70%",
         end:"top 40%",
         scrub:2
@@ -121,9 +126,60 @@ tl5.from(".elem.line3.right",{
 },"three")
 
 
+gsap.from(".btmTop",{
+    opacity:0,
+    scale:0,
+    duration:0.5,
+    scrollTrigger:{
+        trigger:"#bottom-top",
+        scroller:"body",
+        // markers:true,
+        start:"top 70%",
+        end:"top 30%",
+        scrub:2
+    }
+})
+var tl6 = gsap.timeline({
+    scrollTrigger:{
+        trigger:".case",
+        scroller:"body",
+        // markers:true,
+        start:"top 70%",
+        end:"top 40%",
+        scrub:2
+    }
+})
+tl6.from(".case h1",{
+    opacity:0,
+    // delay:1,
+    duration:1
+})
+tl6.from(".case p",{
+    x:500,
+    opacity:0,
+    duration:0.5
+})
+
+gsap.from(".btmEnd",{
+    y:200,
+    opacity:0,
+    scale:1,
+    duration:1,
+    scrollTrigger:{
+        trigger:".btmEnd .betu",
+        scroller:"body",
+        // markers:true,
+        start:"top 70%",
+        end:"top 500%",
+        scrub:2
+    }
+})
+
+
 
 var crsr=document.querySelector(".crsr")
 var body = document.querySelector("body")
+var h1 = document.querySelector(".center-part1 h1")
 
 body.addEventListener("mousemove", (dets)=>{
     gsap.to(crsr,{
@@ -132,3 +188,4 @@ body.addEventListener("mousemove", (dets)=>{
         duration:0.6,
     })
 })
+

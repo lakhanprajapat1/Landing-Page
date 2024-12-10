@@ -31,7 +31,10 @@ nav h1 i{
     display: inline-block;
     rotate: 45deg;
     font-size: 4.5vh;
-
+}
+nav h1 i:hover{
+    rotate: 360deg;
+    transition: all 1s ease;
 }
 #part2 h4{
     display: inline-block;
@@ -39,12 +42,19 @@ nav h1 i{
     font-size: 1.5vw;
     font-weight: 600;
 }
+#part2 h4:hover{
+    color:#87db21;
+}
 #part2 button{
     padding: 10px 14px;
     font-size: 20px;
     font-weight: 500;
     background-color: transparent;
     border: 1px solid #000;
+}
+#part2 button:hover{
+    background-color: #B9FF66;
+    transition: all 0.5s linear;
 }
 .center{
     height: 85%;
@@ -104,7 +114,7 @@ nav h1 i{
     background: transparent;
 }
 #services{
-    height: 120vh;
+    height: 220vh;
     width: 100%;
 }
 .services{
@@ -179,6 +189,65 @@ nav h1 i{
     color: black;
 }
 
+#bottom-top{
+    height: 80vh;
+    width: 100vw;
+}
+#bottom-top .bottom-top{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh 5vw;
+}
+#bottom-top .bottom-top .elem{
+    height: 100%;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+}
+.gray{
+    background-color: rgba(128, 128, 128, 0.226);
+}
+#bottom-top .bottom-top .elem p{
+    padding-top: 5vh ;
+}
+#bottom-end{
+    height: 100%;
+    width: 100%;
+}
+#bottom-end .services{
+    margin-top: 0;
+}
+
+.bottom-end{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    background-color: #000000d3;
+}
+.bottom-end h4{
+    background-color: #B9FF66;
+    display: inline-block;
+    padding: 6px 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.bottom-end div:not(:last-child){
+    border-right: 1px solid white;
+}
+
+
+
+
+
+
+
+
+
+
 .crsr{
     height: 20px;
     width: 20px;
@@ -186,8 +255,11 @@ nav h1 i{
     background-color: #87db21;
     position: fixed;
     mix-blend-mode: difference;
-    z-index: 10;
+    z-index: 9;
 }
+
+
+
 
 @media  (max-width: 768px) {
     body{
