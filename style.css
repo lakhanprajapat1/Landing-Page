@@ -9,6 +9,9 @@ html, body{
     height: 100%;
     width: 100%;
 }
+body{
+    overflow-x: hidden;
+}
 #home{
     position: relative;
     height: 100%;
@@ -31,7 +34,7 @@ nav h1 i{
 
 }
 #part2 h4{
-    display: inline;
+    display: inline-block;
     margin-right: 3vw;
     font-size: 1.5vw;
     font-weight: 600;
@@ -47,7 +50,7 @@ nav h1 i{
     height: 85%;
     width: 100%;
     display: flex;
-    padding: 9vh 5vw;
+    padding: 9vh 5vw 0;
 }
 .center-part1{
     height: 100%;
@@ -95,9 +98,9 @@ nav h1 i{
     padding: 0 5vw;
 }
 .bottom img{
-    height: 60%;
+    height: 40%;
     width: 20%;
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
     background: transparent;
 }
 #services{
@@ -111,6 +114,7 @@ nav h1 i{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    /* background-color: #836666; */
 }
 .services h1{
     font-size: 5.3vh;
@@ -125,4 +129,166 @@ nav h1 i{
     width: 40%;
     margin-left: 5vw;
     font-size: 20px;
+}
+.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 5vh 5vw;
+}
+.elem{
+    height: 340px;
+    width: 45%;
+    border-radius: 30px;
+    border: 3px solid black;
+    box-shadow: 0 10px 0px rgba(0, 0, 0, 0.443);
+    padding: 50px;
+    display: flex;
+}
+.elem-part1{
+    height: 100%;
+    width: 50%;
+}
+.elem-part1 h2{
+    font-size: 35px;
+}
+.elem-part1 h4{
+    margin-top: 50px;
+    font-size: 20px;
+    background:#B9FF66;
+    display: inline-block;
+    padding: 10px 40px;
+    border-radius: 10px;
+}
+.elem-part2{
+    height: 100%;
+    width: 50%;
+}
+.elem-part2 img{
+    height: 100%;
+    background-size: cover;
+}
+.black{
+    background-color: #000000fb;
+    color: #fff;
+}
+.black h4{
+    color: black;
+}
+
+.crsr{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #87db21;
+    position: fixed;
+    mix-blend-mode: difference;
+    z-index: 10;
+}
+
+@media  (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    nav {
+        padding: 3vh 3vw;
+    }
+    nav h1 {
+        font-size: 3.5vh;
+    }
+    nav h1 i {
+        font-size: 4vh;
+    }
+    #part2 h4 {
+        font-size: 1.2vw;
+        margin-right: 2vw;
+    }
+    #part2 button {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+    .center {
+        flex-direction: column;
+        align-items: center;
+        padding: 5vh 3vw 0;
+    }
+    .center-part1 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .center-part1 h1 {
+        font-size: 6vh;
+    }
+    .center-part1 p {
+        font-size: 18px;
+        margin: 20px auto;
+    }
+    .center-part1 button {
+        font-size: 18px;
+        padding: 8px 25px;
+    }
+    .center-part2 {
+        width: 100%;
+    }
+    .center-part2 img {
+        height: auto;
+        width: 100%;
+    }
+    .bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .bottom img {
+        width: 30%;
+        height: auto;
+    }
+    #services {
+        height: auto;
+    }
+    .services {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 0 3vw;
+    }
+    .services h1 {
+        font-size: 4vh;
+    }
+    .services p {
+        width: 100%;
+        font-size: 16px;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 5vh 3vw;
+    }
+    .elem {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        padding: 30px;
+    }
+    .elem-part1, .elem-part2 {
+        width: 100%;
+    }
+    .elem-part1 h2 {
+        font-size: 28px;
+    }
+    .elem-part1 h4 {
+        font-size: 16px;
+        padding: 8px 30px;
+    }
+    .elem-part2 img {
+        height: auto;
+        width: 100%;
+    }
 }
